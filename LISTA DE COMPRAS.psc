@@ -57,17 +57,17 @@ Algoritmo Lista_de_Compras
 			Escribir "LISTA DE COMPRAS"
 			Escribir "COMIDAS"
 
-			Para i <- 1 Hasta cont
+			Para i <- 1 Con paso 1 Hasta cont
 			        Escribir i ") " Lista_comida(i)
 			FinPara
 				
 			Escribir "FRUTAS Y VERDURAS"
-			Para J <- 1 Hasta cont2
+			Para J <- 1 Con paso 1 Hasta cont2
 				Escribir J ") " Lista_FyV(j)
 			FinPara
 				
 			Escribir "ARTICULOS DE LIMPIEZA"
-			Para K <- 1 Hasta cont3
+			Para K <- 1 Con paso 1 Hasta cont3
 				Escribir K ") " Lista_Limpieza(k)
 			FinPara
 		FinSegun
