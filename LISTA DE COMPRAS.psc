@@ -1,10 +1,14 @@
-Algoritmo sin_titulo
+Algoritmo Lista_de_Compras
 	
-	Definir categoria, i Como Entero
+	Definir categoria, i,j, k, cont Como Entero
 	Definir alimentos, vector Como cadena
 	
-	Dimension Lista_comida[10]
-	
+	Dimension Lista_comida[15]
+        Dimension Lista_FyV[15]
+	Dimension Lista_Limpieza[15]
+
+        Repetir
+
 	Escribir "LISTA DE COMPRAS"
 	Escribir "1- COMIDA"
 	Escribir "2- FRUTAS Y VERDURAS"
@@ -18,6 +22,7 @@ Algoritmo sin_titulo
 		1: 
 			Hacer 
 				i = i + 1
+                                cont = cont + 1
 				Escribir"Ingrese los alimentos que necesita comprar o presione # para salir"
 				Leer alimentos
 				
@@ -28,25 +33,44 @@ Algoritmo sin_titulo
 			
 		2:
 			Hacer 
-				i = i + 1
+				j = j + 1
+                                cont2 = cont2 + 1
 				Escribir"Ingrese los alimentos que necesita comprar o presione # para salir"
 				Leer alimentos
 				
 				Si alimentos <> "#"
-					Lista_comida(i) = alimentos
+					Lista_FyV(j) = alimentos
 				FinSi
 			Hasta Que alimentos = "#"
 		3:
 			Hacer 
-			i = i + 1
+			k = k + 1
+                        cont3 = cont3 +1
 			Escribir"Ingrese los alimentos que necesita comprar o presione # para salir"
 			Leer alimentos
 			
 			Si alimentos <> "#"
-				Lista_comida(i) = alimentos
+				Lista_Limpieza(k) = alimentos
 			FinSi
 		Hasta Que alimentos = "#"
-	FinSegun
-	
-	
+                4:
+			Escribir "LISTA DE COMPRAS"
+			Escribir "COMIDAS"
+
+			Para i <- 1 Con paso 1 Hasta cont
+			        Escribir i ") " Lista_comida(i)
+			FinPara
+				
+			Escribir "FRUTAS Y VERDURAS"
+			Para J <- 1 Con paso 1 Hasta cont2
+				Escribir J ") " Lista_FyV(j)
+			FinPara
+				
+			Escribir "ARTICULOS DE LIMPIEZA"
+			Para K <- 1 Con paso 1 Hasta cont3
+				Escribir K ") " Lista_Limpieza(k)
+			FinPara
+		FinSegun
+	Hasta Que categoria = 5
+		
 FinAlgoritmo
